@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Github, Linkedin, Twitter } from './BrandIcons';
+import { Github, Linkedin, Instagram, Facebook } from './BrandIcons';
 import '../styles/Navbar.css';
 
 const Navbar = () => {
@@ -40,9 +40,16 @@ const Navbar = () => {
             </a>
           ))}
           <div className="social-links">
-            <a href="#"><Github size={20} /></a>
-            <a href="#"><Linkedin size={20} /></a>
-            <a href="#"><Twitter size={20} /></a>
+            <a href="https://github.com/DipeshAcharya1"><Github size={20} /></a>
+            <a href="https://www.linkedin.com/in/dipesh-acharya-13b806278/">
+              <Linkedin size={20} />
+            </a>
+            <a href="https://www.instagram.com/dipesh_ach/">
+              <Instagram size={20} />
+            </a>
+            <a href="https://www.facebook.com/dipesh.acharya.5815">
+              <Facebook size={20} />
+            </a>
           </div>
         </div>
 
