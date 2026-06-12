@@ -19,6 +19,7 @@ const Navbar = () => {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
+    { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -26,7 +27,7 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
         <a href="#home" className="logo">
-          PORTFOLIO<span className="dot">.</span>
+          DA<span className="dot">.</span>
         </a>
 
         <div className={`nav-links ${isOpen ? 'open' : ''}`}>

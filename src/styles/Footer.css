@@ -1,29 +1,36 @@
+/* ── FOOTER ── */
 .footer {
-  padding: 3rem 0;
-  border-top: 1px solid var(--glass-border);
-  color: var(--text-muted);
-  font-size: 0.9rem;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--border);
 }
 
 .footer-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
+}
+
+.footer-copy {
+  font-size: 0.82rem;
+  color: var(--text-3);
 }
 
 .footer-links {
   display: flex;
-  gap: 2rem;
+  gap: 1.8rem;
 }
 
-.footer-links a:hover {
-  color: var(--text-main);
+.footer-links a {
+  font-size: 0.82rem;
+  color: var(--text-3);
+  transition: var(--tr);
 }
+.footer-links a:hover { color: var(--accent); }
 
 @media (max-width: 600px) {
   .footer-container {
     flex-direction: column;
-    gap: 1rem;
     text-align: center;
   }
 }

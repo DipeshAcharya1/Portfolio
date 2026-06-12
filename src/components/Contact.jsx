@@ -13,11 +13,6 @@ const Contact = () => {
     setIsSubmitting(true);
     setStatus({ type: '', message: '' });
 
-    // Debugging logs
-    console.log("Service ID:", import.meta.env.VITE_EMAILJS_SERVICE_ID);
-    console.log("Template ID:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
-    console.log("Public Key:", import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-
     emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
 
     emailjs.sendForm(
@@ -42,8 +37,9 @@ const Contact = () => {
     <section id="contact" className="section contact-section">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Let's <span className="gradient-text">Connect</span></h2>
-          <p className="section-subtitle">Have a project in mind? Reach out and let's build something amazing together.</p>
+          <span className="section-label">Contact</span>
+          <h2 className="section-title">Let's Connect</h2>
+          <p className="section-subtitle">Have a project in mind? Reach out and let's build something together.</p>
         </div>
 
         <div className="contact-container">
@@ -71,15 +67,18 @@ const Contact = () => {
             </div>
           </div>
 
-          <form ref={form} onSubmit={sendEmail} className="contact-form glass-morphism">
+          <form ref={form} onSubmit={sendEmail} className="contact-form">
             <div className="form-group">
-              <input type="text" name="user_name" placeholder="Your Name" required />
+              <label htmlFor="user_name">Your Name</label>
+              <input id="user_name" type="text" name="user_name" required />
             </div>
             <div className="form-group">
-              <input type="email" name="user_email" placeholder="Your Email" required />
+              <label htmlFor="user_email">Email Address</label>
+              <input id="user_email" type="email" name="user_email" required />
             </div>
             <div className="form-group">
-              <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+              <label htmlFor="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
             </div>
             
             {status.message && (

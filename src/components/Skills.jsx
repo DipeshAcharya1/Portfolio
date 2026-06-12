@@ -13,13 +13,14 @@ const Skills = () => {
     <section id="skills" className="section skills-section">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Technical <span className="gradient-text">Expertise</span></h2>
+          <span className="section-label">Technical Stack</span>
+          <h2 className="section-title">Skills &amp; Tools</h2>
           <p className="section-subtitle">A collection of tools and technologies I use to bring ideas to life.</p>
         </div>
 
         <div className="skills-grid">
           {skills.map((skill, index) => (
-            <div key={index} className="skill-card glass-morphism animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+            <div key={index} className="skill-card animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="skill-icon">{skill.icon}</div>
               <h3 className="skill-name">{skill.name}</h3>
               <p className="skill-desc">{skill.desc}</p>
